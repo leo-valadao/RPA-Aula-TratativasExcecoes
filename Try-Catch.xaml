@@ -1,0 +1,331 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Try_Catch" sap:VirtualizedContainerService.HintSize="983,950" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="32">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>Microsoft.Exchange.WebServices.Data</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Mail.Exchange.Activities</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="64">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>Microsoft.Exchange.WebServices</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Try-Catch" sap:VirtualizedContainerService.HintSize="480,885" sap2010:WorkflowViewState.IdRef="Sequence_7">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:Comment DisplayName="Try, Catch e Finally - Comment" sap:VirtualizedContainerService.HintSize="438,284" sap2010:WorkflowViewState.IdRef="Comment_3" Text="1 - Try: Área para realizar as atividades desejadas que poderão acontecer o erro.&#xA;&#xA;2 - Catch: Área aonde o programairá caso ocorra algum erro dentro da área do Try CASO o tipo de erro esteja especificado no Catch. Não exite limites de tipos de erros que podem ser utilizados no Catch.&#xA;&#xA;3 - Finally: Área onde as atividades irão executar caso nenhum erro ocorra dentro do Try OU caso esse erro seja tratado pelo Catch." />
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,469" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+      <TryCatch.Try>
+        <Sequence sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_27">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Bloco de Notas - Click " sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition Position="Center">
+                <ui:CursorPosition.OffsetX>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:CursorPosition.OffsetX>
+                <ui:CursorPosition.OffsetY>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:CursorPosition.OffsetY>
+              </ui:CursorPosition>
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b634247a-955a-447b-9340-4eca4a3c13b1" InformativeScreenshot="faff3b92ec81bc857151200308c9ecc6" Selector="&lt;wnd app='notepad.exe' cls='Notepad' title='Sem título - Bloco de notas' /&gt;" TimeoutMS="3000">
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:Click.Target>
+          </ui:Click>
+        </Sequence>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:ArgumentException" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_9">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:ArgumentException">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:ArgumentException" Name="exception" />
+            </ActivityAction.Argument>
+            <Sequence sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_29">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="s:DateTime" Name="DataHorarioErro" />
+                <Variable x:TypeArguments="x:String" Name="LocalFotoErro" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Assign DisplayName="Data e Horário do Erro - Assign" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_17">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="s:DateTime">[DataHorarioErro]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="s:DateTime">[DateTime.Now]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ui:LogMessage DisplayName="ERRO - Bloco de Notas - Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_12" Level="Error" Message="[&quot;ERRO - Problema no Bloco de Notas! &quot;+DataHorarioErro.ToString(&quot;dd/MM/yyyy HH:mm:ss&quot;)+Environment.NewLine+&#xA;&quot;Source: &quot;+exception.Source+Environment.NewLine+&#xA;&quot;Message: &quot;+exception.Message+Environment.NewLine+&#xA;&quot;Error: &quot;+exception.ToString]" />
+              <Sequence DisplayName="Tirar Foto da Tela" sap:VirtualizedContainerService.HintSize="334,66" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="ui:Image" Name="FotoErro" />
+                </Sequence.Variables>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:TakeScreenshot WaitBefore="{x:Null}" DisplayName="ERRO - Bloco de Notas - Take Screenshot" sap:VirtualizedContainerService.HintSize="334,68" sap2010:WorkflowViewState.IdRef="TakeScreenshot_3" Screenshot="[FotoErro]">
+                  <ui:TakeScreenshot.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="ac14e298-9d57-436c-adaf-01469bfc22ec">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:TakeScreenshot.Target>
+                </ui:TakeScreenshot>
+                <Assign DisplayName="ERRO - Bloco de Notas - Assign" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_18">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:String">[LocalFotoErro]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:String">["C:\Users\leonardo.valadao\Desktop\Erro Bloco de Notas "+DataHorarioErro.ToString("dd-MM-yyyy HH-mm-ss")+".png"]</InArgument>
+                  </Assign.Value>
+                </Assign>
+                <ui:SaveImage DisplayName="ERRO - Bloco de Notas - Save Image" FileName="[LocalFotoErro]" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="SaveImage_3" Image="[FotoErro]" />
+              </Sequence>
+              <ui:SendExchangeMail ApplicationId="{x:Null}" Bcc="{x:Null}" DirectoryId="{x:Null}" Domain="{x:Null}" EmailAutodiscover="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" AuthenticationMode="UserNameAndPassword" Body="[&quot;ERRO - Problema no Bloco de Notas! &quot;+DataHorarioErro.ToString(&quot;dd/MM/yyyy HH:mm:ss&quot;)+Environment.NewLine+&#xA;&quot;Source: &quot;+exception.Source+Environment.NewLine+&#xA;&quot;Message: &quot;+exception.Message+Environment.NewLine+&#xA;&quot;Error: &quot;+exception.ToString]" Cc="leonardovaladao.iel@fieg.com.br" DisplayName="Destinatário - Send Exchange Mail Message" ExchangeVersion="Exchange2007_SP1" sap:VirtualizedContainerService.HintSize="334,145" sap2010:WorkflowViewState.IdRef="SendExchangeMail_4" IsBodyHtml="False" IsDraft="False" Password="Fieb@0826" SaveCopy="False" Server="https://outlook.office365.com/EWS/Exchange.asmx" Subject="Houve Erro na Execução do Robô de Tratativas de Erros" To="leonardovaladao.iel@fieg.com.br" User="robogfin@fieb.org.br">
+                <ui:SendExchangeMail.Files>
+                  <InArgument x:TypeArguments="x:String">[LocalFotoErro]</InArgument>
+                </ui:SendExchangeMail.Files>
+              </ui:SendExchangeMail>
+            </Sequence>
+          </ActivityAction>
+        </Catch>
+        <Catch x:TypeArguments="ui:SelectorNotFoundException" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_10">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="ui:SelectorNotFoundException">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="ui:SelectorNotFoundException" Name="exception" />
+            </ActivityAction.Argument>
+            <Sequence sap:VirtualizedContainerService.HintSize="376,574" sap2010:WorkflowViewState.IdRef="Sequence_31">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="s:DateTime" Name="DataHorarioErro" />
+                <Variable x:TypeArguments="x:String" Name="LocalFotoErro" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Assign DisplayName="Data e Horário do Erro - Assign" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_19">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="s:DateTime">[DataHorarioErro]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="s:DateTime">[DateTime.Now]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ui:LogMessage DisplayName="ERRO - Bloco de Notas - Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_13" Level="Error" Message="[&quot;ERRO - Problema no Bloco de Notas! &quot;+DataHorarioErro.ToString(&quot;dd/MM/yyyy HH:mm:ss&quot;)+Environment.NewLine+&#xA;&quot;Source: &quot;+exception.Source+Environment.NewLine+&#xA;&quot;Message: &quot;+exception.Message+Environment.NewLine+&#xA;&quot;Error: &quot;+exception.ToString]" />
+              <Sequence DisplayName="Tirar Foto da Tela" sap:VirtualizedContainerService.HintSize="334,66" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="ui:Image" Name="FotoErro" />
+                </Sequence.Variables>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:TakeScreenshot WaitBefore="{x:Null}" DisplayName="ERRO - Bloco de Notas - Take Screenshot" sap:VirtualizedContainerService.HintSize="334,68" sap2010:WorkflowViewState.IdRef="TakeScreenshot_4" Screenshot="[FotoErro]">
+                  <ui:TakeScreenshot.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="ac14e298-9d57-436c-adaf-01469bfc22ec">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:TakeScreenshot.Target>
+                </ui:TakeScreenshot>
+                <Assign DisplayName="ERRO - Bloco de Notas - Assign" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_20">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:String">[LocalFotoErro]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:String">["C:\Users\leonardo.valadao\Desktop\Erro Bloco de Notas "+DataHorarioErro.ToString("dd-MM-yyyy HH-mm-ss")+".png"]</InArgument>
+                  </Assign.Value>
+                </Assign>
+                <ui:SaveImage DisplayName="ERRO - Bloco de Notas - Save Image" FileName="[LocalFotoErro]" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="SaveImage_4" Image="[FotoErro]" />
+              </Sequence>
+              <ui:SendExchangeMail ApplicationId="{x:Null}" Bcc="{x:Null}" DirectoryId="{x:Null}" Domain="{x:Null}" EmailAutodiscover="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" AuthenticationMode="UserNameAndPassword" Body="[&quot;ERRO - Problema no Bloco de Notas! &quot;+DataHorarioErro.ToString(&quot;dd/MM/yyyy HH:mm:ss&quot;)+Environment.NewLine+&#xA;&quot;Source: &quot;+exception.Source+Environment.NewLine+&#xA;&quot;Message: &quot;+exception.Message+Environment.NewLine+&#xA;&quot;Error: &quot;+exception.ToString]" Cc="leonardovaladao.iel@fieg.com.br" DisplayName="Destinatário - Send Exchange Mail Message" ExchangeVersion="Exchange2007_SP1" sap:VirtualizedContainerService.HintSize="334,145" sap2010:WorkflowViewState.IdRef="SendExchangeMail_5" IsBodyHtml="False" IsDraft="False" Password="Fieb@0826" SaveCopy="False" Server="https://outlook.office365.com/EWS/Exchange.asmx" Subject="Houve Erro na Execução do Robô de Tratativas de Erros" To="leonardovaladao.iel@fieg.com.br" User="robogfin@fieb.org.br">
+                <ui:SendExchangeMail.Files>
+                  <InArgument x:TypeArguments="x:String">[LocalFotoErro]</InArgument>
+                </ui:SendExchangeMail.Files>
+              </ui:SendExchangeMail>
+            </Sequence>
+          </ActivityAction>
+        </Catch>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_11">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <Sequence sap:VirtualizedContainerService.HintSize="376,574" sap2010:WorkflowViewState.IdRef="Sequence_33">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="s:DateTime" Name="DataHorarioErro" />
+                <Variable x:TypeArguments="x:String" Name="LocalFotoErro" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Assign DisplayName="Data e Horário do Erro - Assign" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_21">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="s:DateTime">[DataHorarioErro]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="s:DateTime">[DateTime.Now]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ui:LogMessage DisplayName="ERRO - Bloco de Notas - Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="Error" Message="[&quot;ERRO - Problema no Bloco de Notas! &quot;+DataHorarioErro.ToString(&quot;dd/MM/yyyy HH:mm:ss&quot;)+Environment.NewLine+&#xA;&quot;Source: &quot;+exception.Source+Environment.NewLine+&#xA;&quot;Message: &quot;+exception.Message+Environment.NewLine+&#xA;&quot;Error: &quot;+exception.ToString]" />
+              <Sequence DisplayName="Tirar Foto da Tela" sap:VirtualizedContainerService.HintSize="334,66" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="ui:Image" Name="FotoErro" />
+                </Sequence.Variables>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:TakeScreenshot WaitBefore="{x:Null}" DisplayName="ERRO - Bloco de Notas - Take Screenshot" sap:VirtualizedContainerService.HintSize="334,68" sap2010:WorkflowViewState.IdRef="TakeScreenshot_5" Screenshot="[FotoErro]">
+                  <ui:TakeScreenshot.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="ac14e298-9d57-436c-adaf-01469bfc22ec">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:TakeScreenshot.Target>
+                </ui:TakeScreenshot>
+                <Assign DisplayName="ERRO - Bloco de Notas - Assign" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_22">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:String">[LocalFotoErro]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:String">["C:\Users\leonardo.valadao\Desktop\Erro Bloco de Notas "+DataHorarioErro.ToString("dd-MM-yyyy HH-mm-ss")+".png"]</InArgument>
+                  </Assign.Value>
+                </Assign>
+                <ui:SaveImage DisplayName="ERRO - Bloco de Notas - Save Image" FileName="[LocalFotoErro]" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="SaveImage_5" Image="[FotoErro]" />
+              </Sequence>
+              <ui:SendExchangeMail ApplicationId="{x:Null}" Bcc="{x:Null}" DirectoryId="{x:Null}" Domain="{x:Null}" EmailAutodiscover="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" AuthenticationMode="UserNameAndPassword" Body="[&quot;ERRO - Problema no Bloco de Notas! &quot;+DataHorarioErro.ToString(&quot;dd/MM/yyyy HH:mm:ss&quot;)+Environment.NewLine+&#xA;&quot;Source: &quot;+exception.Source+Environment.NewLine+&#xA;&quot;Message: &quot;+exception.Message+Environment.NewLine+&#xA;&quot;Error: &quot;+exception.ToString]" Cc="leonardovaladao.iel@fieg.com.br" DisplayName="Destinatário - Send Exchange Mail Message" ExchangeVersion="Exchange2007_SP1" sap:VirtualizedContainerService.HintSize="334,145" sap2010:WorkflowViewState.IdRef="SendExchangeMail_6" IsBodyHtml="False" IsDraft="False" Password="Fieb@0826" SaveCopy="False" Server="https://outlook.office365.com/EWS/Exchange.asmx" Subject="Houve Erro na Execução do Robô de Tratativas de Erros" To="leonardovaladao.iel@fieg.com.br" User="robogfin@fieb.org.br">
+                <ui:SendExchangeMail.Files>
+                  <InArgument x:TypeArguments="x:String">[LocalFotoErro]</InArgument>
+                </ui:SendExchangeMail.Files>
+              </ui:SendExchangeMail>
+            </Sequence>
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+      <TryCatch.Finally>
+        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Finally - Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Entrou no Finally!&quot;]" />
+      </TryCatch.Finally>
+    </TryCatch>
+  </Sequence>
+</Activity>
