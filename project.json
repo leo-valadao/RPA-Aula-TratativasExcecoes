@@ -38,7 +38,9 @@
       "privateWorkflows": []
     },
     "processOptions": {
-      "ignoredFiles": []
+      "ignoredFiles": [
+        "Realizar Cálculos.xlsx"
+      ]
     },
     "fileInfoCollection": [],
     "modernBehavior": false
