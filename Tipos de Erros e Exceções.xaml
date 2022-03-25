@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Tipos_de_Erros_e_Exceções" sap:VirtualizedContainerService.HintSize="1245,1305" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Tipos_de_Erros_e_Exceções" sap:VirtualizedContainerService.HintSize="692,1910" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="32">
+    <scg:List x:TypeArguments="x:String" Capacity="28">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System</x:String>
@@ -32,7 +32,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="64">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="32">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -65,38 +65,72 @@
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Tipos de Erros e Exceções" sap:VirtualizedContainerService.HintSize="376,1240" sap2010:WorkflowViewState.IdRef="Sequence_5">
+  <Sequence DisplayName="Tipos de Erros e Exceções" sap:VirtualizedContainerService.HintSize="526,1845" sap2010:WorkflowViewState.IdRef="Sequence_5">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="teste" />
+      <Variable x:TypeArguments="x:Int32" Name="idade" />
+      <Variable x:TypeArguments="x:String" Name="nome" />
+    </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:Comment DisplayName="Tipos de Erros - Comment" sap:VirtualizedContainerService.HintSize="334,265" sap2010:WorkflowViewState.IdRef="Comment_1" Text="1 - Erro de Sintaxe: Erros que o compilador/interpretador não consegue analisar o código escrito em instruções de computador significativas;&#xA;&#xA;2 - Erros de Usuário: Erros onde a entrada de dados do usuário não é aceita por alguma razão;&#xA;&#xA;3 - Erros de Programação: Erros onde a sintaxe está correta, porém o programa não produz os resultados esperados." />
-    <ui:Comment DisplayName="Tipos de Exceções Mais Comuns - Comment" sap:VirtualizedContainerService.HintSize="334,536" sap2010:WorkflowViewState.IdRef="Comment_2" Text="NullReferenceException - Ocorre quando uma variável não tem o valor definido, não foi inicializada (valor null);&#xA;&#xA;IndexOutOfRangeException - Ocorre quando o índice de um objeto está fora do limite da coleção;&#xA;&#xA;SelectorNotFoundException - Ocorre quando um seletor não foi encontrado para uma atividade dentro do tempo limite;&#xA;&#xA;ImageOperationException - Ocorre quando a imagem indicada não foi encontrada dentro do tempo limite;&#xA;&#xA;TextNotFoundException - Ocorre quando o texto indicado não foi encontrado dentro do tempo limite;&#xA;&#xA;ApplicationException - Ocorre quandoa aplicação não responde por algum motivo.&#xA;&#xA;SystemException - Tipo de erro genério que representa todos os outros erros, como um erro genérico;&#xA;&#xA;BusinessException - Tipos de erros separado onde ele é criado pelo programado, sendo um tipo de erro personalizado e exclusivo para seu caso específico." />
-    <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Bloco de Notas - Click " sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
-      <ui:Click.CursorPosition>
-        <ui:CursorPosition Position="Center">
-          <ui:CursorPosition.OffsetX>
-            <InArgument x:TypeArguments="x:Int32" />
-          </ui:CursorPosition.OffsetX>
-          <ui:CursorPosition.OffsetY>
-            <InArgument x:TypeArguments="x:Int32" />
-          </ui:CursorPosition.OffsetY>
-        </ui:CursorPosition>
-      </ui:Click.CursorPosition>
-      <ui:Click.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b634247a-955a-447b-9340-4eca4a3c13b1" InformativeScreenshot="faff3b92ec81bc857151200308c9ecc6" Selector="&lt;wnd app='notepad.exe' cls='Notepad' title='Sem título - Bloco de notas' /&gt;" TimeoutMS="3000">
-          <ui:Target.WaitForReady>
-            <InArgument x:TypeArguments="ui:WaitForReady" />
-          </ui:Target.WaitForReady>
-        </ui:Target>
-      </ui:Click.Target>
-    </ui:Click>
-    <Throw Exception="[new BusinessRuleException(&quot;Erro personalizado&quot;)]" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Throw_1" />
-    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Mensagem de Teste do Global Exception Handler - Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Mensagem de Teste!&quot;]" />
+    <ui:Comment DisplayName="Tipos de Erros - Comment" sap:VirtualizedContainerService.HintSize="484,265" sap2010:WorkflowViewState.IdRef="Comment_1" Text="1 - Erro de Sintaxe: Erros que o compilador/interpretador não consegue analisar o código escrito em instruções de computador significativas;&#xA;&#xA;2 - Erros de Usuário: Erros onde a entrada de dados do usuário não é aceita por alguma razão;&#xA;&#xA;3 - Erros de Programação: Erros onde a sintaxe está correta, porém o programa não produz os resultados esperados." />
+    <ui:Comment DisplayName="Tipos de Exceções Mais Comuns - Comment" sap:VirtualizedContainerService.HintSize="484,536" sap2010:WorkflowViewState.IdRef="Comment_2" Text="NullReferenceException - Ocorre quando uma variável não tem o valor definido, não foi inicializada (valor null);&#xA;&#xA;IndexOutOfRangeException - Ocorre quando o índice de um objeto está fora do limite da coleção;&#xA;&#xA;SelectorNotFoundException - Ocorre quando um seletor não foi encontrado para uma atividade dentro do tempo limite;&#xA;&#xA;ImageOperationException - Ocorre quando a imagem indicada não foi encontrada dentro do tempo limite;&#xA;&#xA;TextNotFoundException - Ocorre quando o texto indicado não foi encontrado dentro do tempo limite;&#xA;&#xA;ApplicationException - Ocorre quandoa aplicação não responde por algum motivo.&#xA;&#xA;SystemException - Tipo de erro genério que representa todos os outros erros, como um erro genérico;&#xA;&#xA;BusinessException - Tipos de erros separado onde ele é criado pelo programado, sendo um tipo de erro personalizado e exclusivo para seu caso específico." />
+    <Assign sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[nome]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">Leonardo</InArgument>
+      </Assign.Value>
+    </Assign>
+    <If Condition="[nome.Length &gt; 5]" sap:VirtualizedContainerService.HintSize="484,301" sap2010:WorkflowViewState.IdRef="If_2">
+      <If.Then>
+        <Sequence sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_8">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Throw Exception="[new BusinessRuleException(&quot;Erro personalizado&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_3" />
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_9">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </If.Else>
+    </If>
+    <If Condition="[nome.Length &gt; 5]" sap:VirtualizedContainerService.HintSize="484,270" sap2010:WorkflowViewState.IdRef="If_1">
+      <If.Then>
+        <Sequence sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_7">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </If.Else>
+    </If>
+    <Throw Exception="[new BusinessRuleException(&quot;Erro personalizado&quot;)]" sap:VirtualizedContainerService.HintSize="484,22" sap2010:WorkflowViewState.IdRef="Throw_1" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Mensagem de Teste do Global Exception Handler - Message Box" sap:VirtualizedContainerService.HintSize="484,59" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Mensagem de Teste!&quot;]" />
   </Sequence>
 </Activity>
